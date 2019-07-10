@@ -5,6 +5,8 @@
                 <i class="checkBtn fas fa-check"  v-bind:class="{checkBtnCompleted : todoItem.completed }" v-on:click="toggleComplete(todoItem, index)"></i>
                 <span v-bind:class="{textCompleted : todoItem.completed }">{{ todoItem.item }}</span>
                 <span class="removeBtn" v-on:click="removeTodo(todoItem, index)">
+
+                    
                     <i class="far fa-trash-alt"></i>
                 </span>
             </li>
