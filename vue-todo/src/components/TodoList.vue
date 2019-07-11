@@ -6,7 +6,7 @@
                 <span v-bind:class="{textCompleted : todoItem.completed }">{{ todoItem.item }}</span>
                 <span class="removeBtn" v-on:click="removeTodo(todoItem, index)">
 
-                    
+
                     <i class="far fa-trash-alt"></i>
                 </span>
             </li>
