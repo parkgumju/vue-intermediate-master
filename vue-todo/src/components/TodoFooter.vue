@@ -10,8 +10,8 @@
 export default {
     methods : {
         clearTodo : function(){
-            console.log('삭제');
-            localStorage.clear();
+            this.$store.commit('clearOneItem');
+            // this.$emit('allClearTodo');
         }
     }
 }
