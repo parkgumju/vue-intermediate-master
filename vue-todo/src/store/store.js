@@ -1,6 +1,7 @@
 import Vue from 'vue' 
 import Vuex from 'vuex'
 
+
 Vue.use(Vuex);
 
 // Todo.vue
@@ -24,6 +25,11 @@ const storage = {
 export const store = new Vuex.Store({
     state : {
         todoItems : storage.fetch()
+    },
+    getters :{
+        storedTodoItems(state){
+            return state.todoItems;
+        }
     },
     mutations : {
         addOneItem(state, todoItem) {

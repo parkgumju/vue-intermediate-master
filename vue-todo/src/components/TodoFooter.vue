@@ -7,12 +7,16 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
     methods : {
-        clearTodo : function(){
-            this.$store.commit('clearOneItem');
-            // this.$emit('allClearTodo');
-        }
+        ...mapMutations({
+           clearTodo : 'clearOneItem'
+        }),
+        // clearTodo : function(){
+        //     this.$store.commit('clearOneItem');
+        //     // this.$emit('allClearTodo');
+        // }
     }
 }
 </script>
